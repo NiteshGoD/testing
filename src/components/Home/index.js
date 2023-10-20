@@ -11,14 +11,13 @@ const Home = () => {
     const nameArray = ['N','i','t','e','s','h']
     const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r']
     
-    // useEffect( () => {
-    //     let timer1 = setTimeout(()=> delay * 4000);
-        
-    //     return () => {
-    //         setLetterClass('text-animate-hover')
-    //         clearTimeout(timer1)
-    //     }
-    // })
+
+    useEffect(()=>{
+     setTimeout(() => {
+            setLetterClass('text-animate-hover')
+        }, 4000)
+        //[] , this is for the first render only.
+    },[])
 
     return (
        <div className="container home-page">
