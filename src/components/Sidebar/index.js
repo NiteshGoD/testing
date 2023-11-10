@@ -47,22 +47,22 @@ const Sidebar = () => {
           </div>
         <ul>
             <li>
-                <a target="_blank" rel="noreferrer" href='https://www.google.com'>
+                <a target="_blank" rel="noreferrer" href='https://www.linkedin.com/in/nitesh-ranjitkar-857293143/'>
                     <FontAwesomeIcon icon = {faLinkedin} color="#4d4d4e" />
                 </a>
             </li>
             <li>
-                <a target="_blank" rel="noreferrer" href='https://www.github.com'>
+                <a target="_blank" rel="noreferrer" href='https://github.com/NiteshGoD'>
                     <FontAwesomeIcon icon = {faGithub} color="#4d4d4e" />
                 </a>
             </li>
             <li>
-                <a target="_blank" rel="noreferrer" href='https://www.youtube.com'>
+                <a target="_blank" rel="noreferrer" href='https://www.youtube.com/@TheAlmightyNitesh'>
                     <FontAwesomeIcon icon = {faYoutube} color="#4d4d4e" />
                 </a>
             </li>
             <li>
-                <a target="_blank" rel="noreferrer" href='https://www.google.com'>
+                <a target="_blank" rel="noreferrer" href='https://www.skype.com/en/'>
                     <FontAwesomeIcon icon = {faSkype} color="#4d4d4e" />
                 </a>
             </li>
