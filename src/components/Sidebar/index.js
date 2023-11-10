@@ -15,20 +15,20 @@ const Sidebar = () => {
     }
     return (
     <div className='nav-bar'>
-        <Link className='logo' to ='/'>
+        <Link className='logo' to ='/testing'>
             <img src = {LogoS} alt="logo" />
             <img className= "sub-logo" src = {LogoSubtitle} alt="nitesh" />
         </Link>
         <nav id='nav_content' className={clicked ? "#nav_content active" : "#nav_content"}>
-            <NavLink exact = "true" activeclassname = "active" to="/">
+            <NavLink exact = "true" activeclassname = "active" to="/testing">
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon>
             </NavLink>
 
-            <NavLink exact = "true" activeclassname="active" className="about-link" to="/about">
+            <NavLink exact = "true" activeclassname="active" className="about-link" to="/testing/about">
                 <FontAwesomeIcon icon={faUser} color = "#4d4d4e" />
             </NavLink>
 
-            <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
+            <NavLink exact="true" activeclassname="active" className="contact-link" to="/testing/contact">
                 <FontAwesomeIcon icon={faEnvelope} color = "#4d4d4e" />
             </NavLink>
 
