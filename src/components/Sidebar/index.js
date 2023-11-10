@@ -1,18 +1,25 @@
 import { Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import './index.scss';
-import LogoS from '../../assets/images/logo-s.png';
-import LogoSubtitle from '../../assets/images/logo_sub.png';
+import LogoS from '../../assets/images/logo-sn.png';
+import LogoSubtitle from '../../assets/images/logo_subn.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faGithub, faLinkedin, faSkype, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { click } from '@testing-library/user-event/dist/click';
 
-const Sidebar = () => (
+const Sidebar = () => {
+    const [clicked,setClicked] = useState(false);
+    const handleClick= () =>{
+        setClicked(!clicked);
+    }
+    return (
     <div className='nav-bar'>
         <Link className='logo' to ='/'>
             <img src = {LogoS} alt="logo" />
             <img className= "sub-logo" src = {LogoSubtitle} alt="nitesh" />
         </Link>
-        <nav>
+        <nav id='nav_content' className={clicked ? "#nav_content active" : "#nav_content"}>
             <NavLink exact = "true" activeclassname = "active" to="/">
                 <FontAwesomeIcon icon={faHome} color="#4d4d4e"></FontAwesomeIcon>
             </NavLink>
@@ -24,8 +31,20 @@ const Sidebar = () => (
             <NavLink exact="true" activeclassname="active" className="contact-link" to="/contact">
                 <FontAwesomeIcon icon={faEnvelope} color = "#4d4d4e" />
             </NavLink>
+
+          
         
         </nav>
+
+        <div id="mobile" onClick={handleClick}>
+            {/* <i className="fas fa-bars"></i>
+            <i className="fas fa-times"></i> */}
+            <i
+              id="bar"
+              className={clicked ? "fas fa-times" : "fas fa-bars"}
+              // onClick={this.props.handleClick}
+            ></i>
+          </div>
         <ul>
             <li>
                 <a target="_blank" rel="noreferrer" href='https://www.google.com'>
@@ -50,6 +69,7 @@ const Sidebar = () => (
         </ul>
 
     </div>
-)
+    );
+}
 
 export default Sidebar
